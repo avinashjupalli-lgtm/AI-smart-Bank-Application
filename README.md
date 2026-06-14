@@ -58,7 +58,7 @@ An AI-powered Banking Application developed using Python, Flask, Machine Learnin
 
 ### Database
 
-* SQLite
+* MySQL
 
 ### Machine Learning
 
@@ -78,7 +78,7 @@ An AI-powered Banking Application developed using Python, Flask, Machine Learnin
 
 ## 📂 Project Structure
 
-```text
+
 AI-Banking-System/
 │
 ├── backend/
@@ -107,7 +107,6 @@ AI-Banking-System/
 │
 ├── requirements.txt
 └── README.md
-```
 
 ---
 
@@ -115,36 +114,36 @@ AI-Banking-System/
 
 ### Clone Repository
 
-```bash
-git clone https://github.com/yourusername/AI-Banking-System.git
-cd AI-Banking-System
-```
+
+git clone https://github.com/avinashjupalli-lgtm/AI-smart-Bank-Application
+cd AI-Smart-Banking-System
+
 
 ### Create Virtual Environment
 
-```bash
+bash
 python -m venv venv
-```
+
 
 ### Activate Environment
 
 #### Windows
 
-```bash
+bash
 venv\Scripts\activate
-```
+
 
 #### Linux/Mac
 
-```bash
+bash
 source venv/bin/activate
-```
+
 
 ### Install Dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-```
+
 
 ---
 
@@ -152,21 +151,21 @@ pip install -r requirements.txt
 
 Navigate to backend folder:
 
-```bash
+bash
 cd backend
-```
+
 
 Start Flask Server:
 
-```bash
+bash
 python app.py
-```
+
 
 Server runs on:
 
-```text
+text
 http://127.0.0.1:5000
-```
+
 
 ---
 
@@ -174,17 +173,17 @@ http://127.0.0.1:5000
 
 Open:
 
-```text
+text
 frontend/index.html
-```
+
 
 or use VS Code Live Server.
 
 Frontend runs on:
 
-```text
+text
 http://127.0.0.1:5500
-```
+
 
 ---
 
@@ -205,9 +204,9 @@ Output:
 
 Model file:
 
-```text
+text
 fraud_model.pkl
-```
+
 
 ---
 
@@ -266,7 +265,11 @@ Generates financial insights and recommendations.
 
 ## 👨‍💻 Author
 
-**Praveen Kumar**
+**Jupalli Avinash**
+**B.TECH-CSM**
+**CMR TECHNICAL CAMPUS(CMRTC)**
+GitHub:https://github.com/avinashjupalli-lgtm
+Linkdin:https://www.linkedin.com/in/avinash-jupalli-bb2662291/
 
 AI Banking System Project
 

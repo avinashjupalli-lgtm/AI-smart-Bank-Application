@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏦 Banking Admin Dashboard</h1>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Total Users</h3>
+            <h2 id="users">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Accounts</h3>
+            <h2 id="accounts">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Transactions</h3>
+            <h2 id="transactions">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Bank Balance</h3>
+            <h2 id="balance">₹0</h2>
+        </div>
+
+    </div>
+
+    <!-- Users -->
+
+    <div class="section">
+
+        <h2>👥 Users</h2>
+
+        <table id="usersTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Accounts -->
+
+    <div class="section">
+
+        <h2>💳 Accounts</h2>
+
+        <table id="accountsTable">
+
+            <thead>
+                <tr>
+                    <th>Account ID</th>
+                    <th>User ID</th>
+                    <th>Type</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Transactions -->
+
+    <div class="section">
+
+        <h2>💰 Transactions</h2>
+
+        <table id="transactionsTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Account</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Fraud Monitoring -->
+
+    <div class="section">
+
+        <h2>🚨 Fraud Monitoring</h2>
+
+        <table id="fraudTable">
+
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Risk Level</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

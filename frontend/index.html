@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Banking System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginSection" class="login-wrapper">
+
+    <div class="login-card">
+
+        <div class="logo">
+            <i class="fas fa-university"></i>
+            <h1>AI Banking System</h1>
+            <p>Smart Banking Powered by AI</p>
+        </div>
+
+        <div class="auth-grid">
+
+            <!-- LOGIN -->
+
+            <div class="auth-box">
+
+                <h2>Login</h2>
+
+                <input type="email"
+                       id="loginEmail"
+                       placeholder="Email">
+
+                <input type="password"
+                       id="loginPassword"
+                       placeholder="Password">
+
+                <button onclick="login()">
+                    Login
+                </button>
+                <p class="register-link">
+
+    Don't have an account?
+
+    <a href="register.html">
+        Create Account
+    </a>
+
+</p>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" style="display:none;">
+
+    <div class="sidebar">
+
+    <h2>🏦 Bank AI</h2>        
+    <ul>
+
+<li onclick="showSection('dashboardSection')">
+🏠 Dashboard
+</li>
+
+<li onclick="showSection('depositSection')">
+💰 Deposit Money
+</li>
+
+<li onclick="showSection('withdrawSection')">
+💸 Withdraw Money
+</li>
+
+<li onclick="showSection('fraudSection')">
+🛡 Fraud Detection
+</li>
+
+<li onclick="showSection('summarySection')">
+🤖 AI Summary
+</li>
+
+<li onclick="showSection('transactionSection')">
+📄 Transaction History
+</li>
+
+
+ </ul>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="main-content">
+
+        <header>
+
+            <div>
+                <h1>AI Banking Dashboard</h1>
+                <p>Welcome back</p>
+            </div>
+
+            <div class="profile">
+
+                <i class="fas fa-user-circle"></i>
+
+                <span id="username">
+                </span>
+
+            </div>
+
+        </header>
+
+        <!-- STATS -->
+<div
+id="dashboardSection"
+class="content-section"
+>
+
+    <div class="stats">
+
+        <div class="stat-card balance">
+
+            <h3>Current Balance</h3>
+
+            <h2 id="balanceCard">
+                ₹0
+            </h2>
+
+        </div>
+
+        <div class="stat-card deposit">
+
+            <h3>Total Deposits</h3>
+
+            <h2 id="depositCard">
+                ₹0
+            </h2>
+
+        </div>
+
+        <div class="stat-card withdraw">
+
+            <h3>Total Withdrawals</h3>
+
+            <h2 id="withdrawCard">
+                ₹0
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+       <!-- DEPOSIT SECTION -->
+
+<div
+id="depositSection"
+class="content-section"
+>
+
+<div class="card">
+
+    <h2>💰 Deposit Money</h2>
+
+    <input
+        type="number"
+        id="depositAmount"
+        placeholder="Enter Amount"
+    >
+
+    <button onclick="deposit()">
+        Deposit
+    </button>
+
+</div>
+
+</div>
+
+<!-- WITHDRAW SECTION -->
+
+<div
+id="withdrawSection"
+class="content-section"
+>
+
+<div class="card">
+
+    <h2>💸 Withdraw Money</h2>
+
+    <input
+        type="number"
+        id="withdrawAmount"
+        placeholder="Enter Amount"
+    >
+
+    <button onclick="withdrawMoney()">
+        Withdraw
+    </button>
+
+</div>
+
+</div>
+
+<!-- FRAUD SECTION -->
+
+<div
+id="fraudSection"
+class="content-section"
+>
+
+<div class="card">
+
+    <h2>🛡 Fraud Detection</h2>
+
+    <input
+        type="number"
+        id="amount"
+        placeholder="Amount"
+    >
+
+    <input
+        type="number"
+        id="frequency"
+        placeholder="Frequency"
+    >
+
+    <input
+        type="number"
+        id="balance_change"
+        placeholder="Balance Change"
+    >
+
+    <input
+        type="number"
+        id="time"
+        placeholder="Time"
+    >
+
+    <button onclick="fraudCheck()">
+        Check Fraud
+    </button>
+
+</div>
+
+</div>
+
+<!-- AI SUMMARY SECTION -->
+
+<div
+id="summarySection"
+class="content-section"
+>
+
+<div class="card">
+
+    <h2>🤖 AI Financial Summary</h2>
+
+    <button onclick="generateSummary()">
+        Generate Summary
+    </button>
+
+    <div id="summaryResult">
+    </div>
+
+</div>
+
+</div>
+
+<!-- TRANSACTION SECTION -->
+
+<div
+id="transactionSection"
+class="content-section"
+>
+
+<div class="card">
+
+    <h2>📄 Transaction History</h2>
+
+    <table id="historyTable">
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</div>
+
+<!-- API RESPONSE -->
+
+<div id="result"></div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

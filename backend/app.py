@@ -38,13 +38,16 @@ fraud_model = joblib.load(model_path)
 # -----------------------------
 # Database Connection
 # -----------------------------
+import os
+import mysql.connector
+
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="root",
-        database="banking_d"
-        
+        host=os.getenv("MYSQLHOST"),
+        port=int(os.getenv("MYSQLPORT")),
+        user=os.getenv("MYSQLUSER"),
+        password=os.getenv("MYSQLPASSWORD"),
+        database=os.getenv("MYSQLDATABASE")
     )
 
 # -----------------------------

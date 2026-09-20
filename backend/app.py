@@ -926,8 +926,18 @@ def fraud_transactions():
     conn.close()
 
     return jsonify(transactions)
+
+@app.route("/<path:filename>")
+def serve_frontend_files(filename):
+    frontend_path = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)),
+        "frontend"
+    )
+    return send_from_directory(frontend_path, filename)
 # -----------------------------
 # Run App
 # -----------------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
+    

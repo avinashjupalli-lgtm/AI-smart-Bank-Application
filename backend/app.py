@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 # import mysql.connector
 import joblib
@@ -53,11 +53,19 @@ fraud_model = joblib.load(model_path)
 # -----------------------------
 # Home API
 # -----------------------------
+
 @app.route("/")
 def home():
-    return jsonify({
-        "message": "AI Banking Backend Running"
-    })
+    frontend_path = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)),
+        "frontend"
+    )
+    return send_from_directory(frontend_path, "index.html")
+# @app.route("/")
+# def home():
+#     return jsonify({
+#         "message": "AI Banking Backend Running"
+#     })
 
 # -----------------------------
 # Register API

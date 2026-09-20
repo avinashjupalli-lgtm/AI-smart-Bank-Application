@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import mysql.connector
+# import mysql.connector
 import joblib
 import os
 import google.generativeai as genai
 from dotenv import load_dotenv
+from database import get_connection
 
 # -----------------------------
 # Gemini Configuration
@@ -38,17 +39,16 @@ fraud_model = joblib.load(model_path)
 # -----------------------------
 # Database Connection
 # -----------------------------
-import os
-import mysql.connector
+# import os
+# import mysql.connector
 
-def get_connection():
-    return mysql.connector.connect(
-        host=os.getenv("MYSQLHOST"),
-        port=int(os.getenv("MYSQLPORT")),
-        user=os.getenv("MYSQLUSER"),
-        password=os.getenv("MYSQLPASSWORD"),
-        database=os.getenv("MYSQLDATABASE")
-    )
+# def get_connection():
+#     return mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="root",
+#         database="banking_d"
+#     )
 
 # -----------------------------
 # Home API
